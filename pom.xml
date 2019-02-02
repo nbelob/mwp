@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>mwp</groupId>
+  <artifactId>mwp</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>mwp</name>
+
+  <properties>
+    <project.build.javaVersion>10</project.build.javaVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <clean.plugin.version>3.1.0</clean.plugin.version>
+    <compiler.plugin.version>3.7.0</compiler.plugin.version>
+    <dependency.plugin.version>2.10</dependency.plugin.version>
+    <dependency.check.plugin.version>3.3.2</dependency.check.plugin.version>
+    <exec.plugin.version>1.6.0</exec.plugin.version>
+    <gwt.plugin.version>1.0-rc-9</gwt.plugin.version>
+    <jar.plugin.version>3.1.0</jar.plugin.version>
+    <javadoc.plugin.version>3.0.1</javadoc.plugin.version>
+    <jetty.plugin.version>9.4.12.v20180830</jetty.plugin.version>
+    <project.info.reports.plugin.version>3.0.0</project.info.reports.plugin.version>
+    <shade.plugin.version>3.1.1</shade.plugin.version>
+    <source.plugin.version>3.0.1</source.plugin.version>
+    <surefire.plugin.version>2.22.0</surefire.plugin.version>
+    <war.plugin.version>3.2.1</war.plugin.version>
+
+    <jsp.api.version>2.3.1</jsp.api.version>
+    <jsp.el.version>3.0.0</jsp.el.version>
+    <jstl.version>1.2</jstl.version>
+    <junit.version>4.12</junit.version>
+    <logback.version>1.2.3</logback.version>
+    <servlet.api.version>4.0.1</servlet.api.version>
+    <slf4j.version>1.7.25</slf4j.version>
+    <spring.version>5.1.1.RELEASE</spring.version>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <configuration>
+          <webApp>
+            <contextPath>/</contextPath>
+          </webApp>
+          <stopKey>foo</stopKey>
+          <stopPort>9999</stopPort>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <!-- Spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- JEE -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+</project>
+
