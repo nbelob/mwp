@@ -4,6 +4,17 @@
     <title>mwp</title>
 </head>
 <body>
-<h1>Проба</h1>
+    <form method="POST">
+        <table align="center">
+            <tr>
+                <td>Проба</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="OK"/>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
