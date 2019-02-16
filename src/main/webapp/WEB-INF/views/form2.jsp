@@ -7,11 +7,14 @@
     <form method="POST">
         <table align="center">
             <tr>
-                <td>Проба</td>
+                <td>Проба форма 2</td>
             </tr>
             <tr>
                 <td>
                     <input type="submit" name="ok" value="OK"/>
+                </td>
+                <td>
+                    <input type="submit" name="cancel" value="Отмена"/>
                 </td>
             </tr>
         </table>
