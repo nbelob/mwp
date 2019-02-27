@@ -10,10 +10,9 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 //@RequestMapping("/")
 public class MwpController {
-    private String ip;
 
     @RequestMapping(value = "/", method = GET)
-    public String home(/*Model model*/) {
+    public String home() {
         return "form1";
     }
 
@@ -23,15 +22,16 @@ public class MwpController {
     }
 
     @RequestMapping(value = "/2", method = GET)
-    public String form2() {
+    public String form2(Model model) {
+        model.addAttribute(new InputForm());
         return "form2";
     }
 
     @RequestMapping(value = "/2", method = POST, params = "ok")
     public String form2Ok(InputForm inputForm) {
-        ip = inputForm.getInput();
-        System.out.println(ip);
-        return "form2";
+        System.out.println(inputForm.getInput());
+//        return "form2";
+        return "redirect:/2";
     }
 
     @RequestMapping(value = "/2", method = POST, params = "cancel")

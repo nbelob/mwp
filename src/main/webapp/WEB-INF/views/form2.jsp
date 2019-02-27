@@ -21,6 +21,9 @@
                     <input type="submit" name="cancel" value="Отмена"/>
                 </td>
             </tr>
+            <tr>
+                <td><input type="text" name="fix" path="fix" style="width:200" /></td>
+            </tr>
         </table>
     </form>
 </body>
